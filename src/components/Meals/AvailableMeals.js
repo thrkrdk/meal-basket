@@ -1,3 +1,4 @@
+import Card from "../UI/Card";
 import classes from "./AvailableMeals.module.css";
 import MealItem from "./MealItem/MealItem";
 const DUMMY_MEALS = [
@@ -40,7 +41,9 @@ const AvailableMeals = () => {
 
   return (
     <section className={classes.meals}>
-      <ul>{mailList}</ul>
+      <Card>
+        <ul>{mailList}</ul>
+      </Card>
     </section>
   );
 };

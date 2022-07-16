@@ -1,22 +1,21 @@
-.meal {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .meal h3 {
-    margin: 0 0 0.25rem 0;
-  }
-  
-  .description {
-    font-style: italic;
-  }
-  
-  .price {
-    margin-top: 0.25rem;
-    font-weight: bold;
-    color: #ad5502;
-    font-size: 1.25rem;
-  }
+import Input from "../../UI/Input";
+import classes from "./MealItemForm.module.css";
+const MealItemForm = (props) => {
+  return (
+    <form className={classes.form}>
+      <Input
+        label="Amount"
+        input={{
+          type: "number",
+          min: "1",
+          max: "5",
+          step: "1",
+          defaultValue: "1",
+        }}
+      />
+      <button>+ Add</button>
+    </form>
+  );
+};
+
+export default MealItemForm;
